@@ -24,7 +24,7 @@ const GithubReducer = (state: StateType, action: ActionType) => {
         user: action.payload,
         loading: false,
       };
-    case "SET_LOADER":
+    case "SET_LOADING":
       return {
         ...state,
         loading: true,
