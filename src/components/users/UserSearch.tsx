@@ -8,12 +8,13 @@ const UserSearch = () => {
   const [text, setText] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setText(e.target.value.trim());
+    setText(e.target.value);
 
   const handleSubmit = (e: React.FormEvent<HTMLElement>) => {
     e.preventDefault();
-    if (text === "") {
+    if (text.trim() === "") {
       setAlert("Please enter a word", "alert");
+      setText("");
     } else {
       searchUser!(text);
       setText("");
