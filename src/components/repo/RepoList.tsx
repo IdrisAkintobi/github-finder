@@ -10,7 +10,7 @@ const RepoList: React.FC<Repos> = ({ repos }) => {
         <h2 className="card-title font-bold text-3xl my-4">
           Latest Repositories
         </h2>
-        {!!repos &&
+        {!!repos.length &&
           repos.map((repo: any) => <RepoItem key={repo.id} repo={repo} />)}
       </div>
     </div>
